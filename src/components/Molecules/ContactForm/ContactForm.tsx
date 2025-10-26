@@ -78,7 +78,7 @@ Interest: ${formData.interest}`
 
       <Button onClick={() => handleSubmit} className={styles.button}>
         <Mailto
-          email="info@thesis.com"
+          email="info@Fritz.com"
           subject={`Contact Request from ${formData.name}`}
           body={`Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nInterest: ${formData.interest}`}
         >
