@@ -1,0 +1,384 @@
+/* Home Page Styles */
+.homePage {
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Hero Slider Section */
+.heroSlider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activeSlide {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slideContent {
+  text-align: center;
+  color: var(--white);
+  max-width: 800px;
+  padding: 40px 20px;
+  background-color: transparent;
+}
+
+.slideTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: var(--text-shadow);
+  background-color: transparent;
+}
+
+.slideSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: var(--text-shadow);
+  background-color: transparent;
+}
+
+.sliderControls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.activeDot {
+  background-color: var(--golden-yellow);
+  width: 16px;
+  height: 16px;
+}
+
+/* Icon Box */
+.iconBox {
+  font-size: 3rem;
+  color: var(--golden-yellow);
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+/* Potato Varieties Section */
+.varietyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  background-color: transparent;
+}
+
+.varietyCard {
+  background: var(--white);
+  border: 2px solid var(--russet-brown);
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.varietyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.varietyIcon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.varietyName {
+  font-size: 1.5rem;
+  color: var(--russet-brown);
+  margin-bottom: 10px;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.varietyOrigin {
+  color: var(--earth-brown);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-style: italic;
+  background-color: transparent;
+}
+
+.varietyUses {
+  color: var(--earth-brown);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+/* Statistics Section */
+.statsSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: var(--white);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  background-color: transparent;
+}
+
+.statItem {
+  text-align: center;
+  background-color: transparent;
+}
+
+.statIcon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.statNumber {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--golden-yellow);
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.statLabel {
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: transparent;
+}
+
+/* Import Process Timeline */
+.processTimeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 0;
+  background-color: transparent;
+}
+
+.processStep {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.processIcon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.processStep h3 {
+  font-size: 1.3rem;
+  color: var(--russet-brown);
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.processStep p {
+  font-size: 0.95rem;
+  color: var(--earth-brown);
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+.processLine {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-tan);
+  flex-shrink: 0;
+}
+
+/* Testimonials */
+.testimonialCard {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.quoteIcon {
+  font-size: 4rem;
+  color: var(--golden-yellow);
+  line-height: 1;
+  margin-bottom: 15px;
+  opacity: 0.3;
+  background-color: transparent;
+}
+
+.testimonialQuote {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--earth-brown);
+  margin-bottom: 20px;
+  font-style: italic;
+  background-color: transparent;
+}
+
+.testimonialAuthor {
+  border-top: 2px solid var(--cream-white);
+  padding-top: 15px;
+  background-color: transparent;
+}
+
+.authorName {
+  font-weight: 600;
+  color: var(--russet-brown);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+.authorCompany {
+  color: var(--earth-brown);
+  font-size: 0.9rem;
+  background-color: transparent;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: var(--hero-gradient);
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  background-color: transparent;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--cream-white);
+  background-color: transparent;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .heroSlider {
+    height: 500px;
+  }
+
+  .slideTitle {
+    font-size: 2rem;
+  }
+
+  .slideSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .statNumber {
+    font-size: 2.5rem;
+  }
+
+  .processTimeline {
+    flex-direction: column;
+  }
+
+  .processLine {
+    width: 3px;
+    height: 40px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButtons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slideTitle {
+    font-size: 2.5rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .heroSlider {
+    height: 700px;
+  }
+}
