@@ -45,7 +45,7 @@
 }
 
 .logoImage {
-  height: 60px;
+  height: 150px;
   width: auto;
   object-fit: contain;
   background-color: transparent;
@@ -151,7 +151,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .logoImage {
-    height: 45px;
+    height: 100px;
   }
 
   .companyName {
