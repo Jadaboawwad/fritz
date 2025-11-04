@@ -44,6 +44,13 @@
   background-color: transparent;
 }
 
+.logoImage {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  background-color: transparent;
+}
+
 .potatoIcon {
   font-size: 2rem;
   background-color: transparent;
@@ -143,6 +150,10 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .logoImage {
+    height: 45px;
+  }
+
   .companyName {
     font-size: 1.2rem;
   }

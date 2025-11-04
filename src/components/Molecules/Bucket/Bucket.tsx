@@ -17,7 +17,7 @@ const Bucket: FC<IBucketProps> = ({ onCartClick }) => (
         <Image
           alt={appText.bucket.mobileLogoIcon.alt}
           className={BucketStyles.mobileLogoIcon}
-          src="svg/logo.svg"
+          src="/images/logo.png"
         />
       )}
     </Container>

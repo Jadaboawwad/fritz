@@ -14,7 +14,7 @@ const Logo: FC<ILogoProps> = ({ testId }) => (
     <Image
       alt={appText.logo.alt}
       className={LogoStyles.headerLogo}
-      src="svg/logo.svg"
+      src="/images/logo.png"
     />
   </Container>
 )

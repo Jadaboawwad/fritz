@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import Container from 'components/Atoms/Container/Container'
+import Image from 'components/Atoms/Image/Image'
 import HeaderStyles from 'components/Organisms/Header/Header.module.css'
 
 const Header: FC = () => {
@@ -32,8 +33,11 @@ const Header: FC = () => {
       <Container className={HeaderStyles.headerWrapper} testId="header">
         <Link to="/" className={HeaderStyles.logoArea}>
           <div className={HeaderStyles.logo}>
-            <span className={HeaderStyles.potatoIcon}>🥔</span>
-            <span className={HeaderStyles.companyName}>Premium Potato Imports</span>
+            <Image
+              alt="Premium Potato Imports Logo"
+              className={HeaderStyles.logoImage}
+              src="/images/logo.png"
+            />
           </div>
         </Link>
 
