@@ -155,6 +155,16 @@
   background-color: transparent;
 }
 
+.emailLink {
+  color: var(--russet-brown);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.emailLink:hover {
+  color: var(--golden-yellow);
+}
+
 .socialLinks {
   margin-top: 30px;
   padding-top: 25px;
@@ -213,6 +223,22 @@
   text-align: center;
   color: var(--white);
   background-color: transparent;
+}
+
+.emailCta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: var(--golden-yellow);
+  color: var(--earth-brown);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.emailCta:hover {
+  background: #e5b820;
 }
 
 .mapOverlay p {

@@ -27,7 +27,7 @@ const Home = () => {
     { label: "Owner", value: "Rashed Abu Awwad" },
     { label: "Website", value: "www.nashmi7.com" },
     { label: "Email", value: "rashedalawwadu@gmail.com" },
-    { label: "Phone", value: "Add business number" },
+    { label: "Phone | WhatsApp", value: "+1 (443) 397-4814" },
   ]
 
   const logisticsHighlights = [

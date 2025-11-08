@@ -240,3 +240,132 @@ p {
 .button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+.productsPage {
+  width: 100%;
+  background-color: transparent;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.productCard {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hover-shadow);
+}
+
+.productImageWrapper {
+  width: 100%;
+  padding: 16px;
+  background: var(--cream-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: inset 0 0 0 1px rgba(139, 111, 71, 0.08);
+}
+
+.productInfo {
+  padding: 20px 24px 28px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.productInfo h3 {
+  font-size: 1.2rem;
+  color: var(--russet-brown);
+  margin-bottom: 10px;
+}
+
+.productInfo p {
+  font-size: 0.95rem;
+  color: var(--earth-brown);
+}
+
+.quotePage {
+  width: 100%;
+  background-color: transparent;
+}
+
+.quoteForm {
+  max-width: 840px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px 36px;
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quoteRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.quoteField {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quoteField label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--russet-brown);
+}
+
+.quoteField input,
+.quoteField textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(139, 111, 71, 0.3);
+  font-size: 1rem;
+  color: var(--earth-brown);
+  background-color: var(--cream-white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quoteField input:focus,
+.quoteField textarea:focus {
+  outline: none;
+  border-color: var(--golden-yellow);
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.25);
+  background-color: var(--white);
+}
+
+.quoteForm button {
+  align-self: flex-start;
+}
+
+@media (max-width: 767px) {
+  .quoteForm {
+    padding: 28px 24px;
+  }
+
+  .productImageWrapper {
+    padding: 12px;
+  }
+}

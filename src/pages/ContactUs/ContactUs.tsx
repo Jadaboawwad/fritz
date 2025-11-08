@@ -19,15 +19,41 @@ const ContactUs = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('Thank you for your inquiry! We will get back to you soon.')
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      company: '',
-      inquiryType: '',
-      message: '',
-    })
+
+    const subject = 'Nashmi7 LLC Inquiry from Website'
+    const bodyLines = [
+      `Full Name: ${formData.fullName}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Company: ${formData.company || 'Not provided'}`,
+      `Inquiry Type: ${formData.inquiryType || 'Not selected'}`,
+      '',
+      'Message:',
+      formData.message,
+    ]
+
+    const mailtoLink = `mailto:sales@nashmi7.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`
+
+    // Open mail client
+    try {
+      window.open(mailtoLink, '_self')
+    } catch (error) {
+      console.error('Failed to open mail client:', error)
+      // Fallback to direct assignment
+      window.location.href = mailtoLink
+    }
+
+    // Clear form after a short delay to ensure mailto link is processed
+    setTimeout(() => {
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        company: '',
+        inquiryType: '',
+        message: '',
+      })
+    }, 100)
   }
 
   const faqs = [
@@ -64,7 +90,7 @@ const ContactUs = () => {
         <div className="container">
           <h1 className={styles.pageTitle}>Connect with Nashmi7 LLC</h1>
           <p className={styles.pageSubtitle}>
-            Reach out to align on Sysco vendor onboarding, documentation, and delivery schedules.
+            Reach out to align on Sysco vendor onboarding, documentation, and delivery schedules. Our team responds quickly through sales@nashmi7.com.
           </p>
         </div>
       </section>
@@ -116,7 +142,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                       required
                       className={styles.input}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+1 (443) 397-4814"
                     />
                   </div>
                 </div>
@@ -189,8 +215,8 @@ const ContactUs = () => {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>📞</div>
                   <div className={styles.infoContent}>
-                    <h4>Phone</h4>
-                    <p>Add business number</p>
+                    <h4>Phone | WhatsApp</h4>
+                    <p>+1 (443) 397-4814</p>
                   </div>
                 </div>
 
@@ -198,7 +224,11 @@ const ContactUs = () => {
                   <div className={styles.infoIcon}>✉️</div>
                   <div className={styles.infoContent}>
                     <h4>Email</h4>
-                    <p>rashedalawwadu@gmail.com</p>
+                    <p>
+                      <a href="mailto:sales@nashmi7.com" className={styles.emailLink}>sales@nashmi7.com</a>
+                      <br />
+                      <a href="mailto:rashedalawwadu@gmail.com" className={styles.emailLink}>rashedalawwadu@gmail.com</a>
+                    </p>
                   </div>
                 </div>
 
@@ -213,6 +243,7 @@ const ContactUs = () => {
                 <div className={styles.socialLinks}>
                   <h4>Follow Us</h4>
                   <div className={styles.socialIcons}>
+                    <a href="https://wa.me/14433974814" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>💬</a>
                     <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>💼</a>
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>📷</a>
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>📘</a>
@@ -230,6 +261,7 @@ const ContactUs = () => {
           <div className={styles.mapOverlay}>
             <p>📍 Houston, Texas — Nashmi7 LLC Cold-Chain Hub</p>
             <p className={styles.mapNote}>Map placeholder – embed warehouse location once confirmed</p>
+            <a href="mailto:sales@nashmi7.com" className={styles.emailCta}>Email sales@nashmi7.com</a>
           </div>
         </div>
       </section>
