@@ -4,56 +4,88 @@ import styles from './AboutUs.module.css'
 const AboutUs = () => {
   const coreValues = [
     {
-      icon: "🤝",
-      title: "Integrity",
-      description: "We conduct business with honesty, transparency, and ethical practices in every transaction."
+      icon: "🧾",
+      title: "Compliance First",
+      description: "Every shipment is backed by full EU and U.S. documentation, SQF/BRCGS certificates, and traceability reports."
     },
     {
-      icon: "✓",
-      title: "Quality",
-      description: "We never compromise on quality, ensuring every potato meets our rigorous standards."
-    },
-    {
-      icon: "🌱",
-      title: "Sustainability",
-      description: "We partner with farms that practice sustainable agriculture and environmental stewardship."
+      icon: "❄️",
+      title: "Cold-Chain Integrity",
+      description: "We maintain -18 °C storage and continuous temperature monitoring from Belgian producer to Sysco DC."
     },
     {
       icon: "🤝",
-      title: "Partnership",
-      description: "We build long-term relationships based on trust, reliability, and mutual success."
+      title: "Vendor Partnership",
+      description: "Our onboarding toolkit is designed specifically for Sysco procurement, logistics, and quality teams."
+    },
+    {
+      icon: "📈",
+      title: "Scalable Supply",
+      description: "Full reefer container capacity with private label options ensures rapid scaling for Sysco programs."
     },
   ]
 
-  const team = [
+  const leadership = [
     {
-      name: "Robert Thompson",
-      title: "Founder & CEO",
-      bio: "25 years of experience in agricultural imports and global trade."
+      name: "Rashed Abu Awwad",
+      title: "Owner & Vendor Lead",
+      bio: "Primary contact for Sysco vendor onboarding, overseeing commercial strategy, pricing, and partnerships."
     },
     {
-      name: "Maria Garcia",
-      title: "Head of Operations",
-      bio: "Expert in logistics and supply chain management with 15 years in the industry."
+      name: "Belgian Production Partner",
+      title: "SQF / BRCGS Certified Facility",
+      bio: "Produces Nashmi7 private label French fries with full EU export compliance and U.S. FDA registration."
     },
     {
-      name: "David Chen",
-      title: "Quality Assurance Director",
-      bio: "Certified agricultural specialist ensuring top-quality standards for every shipment."
+      name: "Houston Operations Team",
+      title: "Warehouse & Cold-Chain",
+      bio: "Manages import customs, reefer drayage, and temperature-controlled storage at -18 °C."
     },
     {
-      name: "Sarah Williams",
-      title: "Client Relations Manager",
-      bio: "Dedicated to building strong client relationships and providing excellent service."
+      name: "Quality & Regulatory Desk",
+      title: "Documentation & Recall",
+      bio: "Maintains specification sheets, recall protocol and traceability logs aligned with Sysco standards."
     },
+  ]
+
+  const companySnapshot = [
+    { label: "Company Name", value: "Nashmi7 LLC" },
+    { label: "Business Type", value: "Importer · Distributor · Private Label Supplier" },
+    { label: "Headquarters", value: "Houston, Texas – USA" },
+    { label: "Owner", value: "Rashed Abu Awwad" },
+    { label: "Website", value: "www.nashmi7.com" },
+    { label: "Email", value: "rashedalawwadu@gmail.com" },
+    { label: "Phone", value: "Add business number" },
+  ]
+
+  const complianceBadges = [
+    { icon: "🏭", label: "SQF / BRCGS / FSSC 22000 Certificates" },
+    { icon: "🩺", label: "Health Certificate & EU Export Docs" },
+    { icon: "📑", label: "Recall & Traceability Program" },
+    { icon: "🛡️", label: "COI Listing Sysco Corporation" },
   ]
 
   const timeline = [
-    { year: "2010", event: "Company Founded", description: "Started with a vision to revolutionize potato imports" },
-    { year: "2013", event: "First International Partnership", description: "Established relationships with premium farms in 5 countries" },
-    { year: "2016", event: "Expanded Operations", description: "Opened new distribution centers and increased capacity to 300 tons monthly" },
-    { year: "2019", event: "Quality Certification", description: "Achieved ISO 9001 and organic certification" },
-    { year: "2023", event: "Industry Leader", description: "Became top 3 potato importer with 200+ satisfied clients" },
+    {
+      year: "Phase 1",
+      event: "European Production Alignment",
+      description: "Selected Belgian partner with SQF/BRCGS certification, GS1 GTINs, and private label capability."
+    },
+    {
+      year: "Phase 2",
+      event: "U.S. Import Readiness",
+      description: "Secured FDA registration, customs brokers, reefer carriers, and Port of Houston receiving slots."
+    },
+    {
+      year: "Phase 3",
+      event: "Cold-Chain & Storage",
+      description: "Commissioned -18 °C warehouse in Houston with container unloading and palletization workflow."
+    },
+    {
+      year: "Phase 4",
+      event: "Sysco Vendor Toolkit",
+      description: "Assembled company profile, product catalog, pricing, and compliance PDFs for Sysco onboarding."
+    },
   ]
 
   return (
@@ -61,9 +93,9 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className="container">
-          <h1 className={styles.heroTitle}>About Premium Potato Imports</h1>
+          <h1 className={styles.heroTitle}>Nashmi7 LLC Company Profile</h1>
           <p className={styles.heroSubtitle}>
-            Excellence in Every Shipment, Trust in Every Partnership
+            Belgian frozen fries delivered through a certified, temperature-controlled supply chain built for Sysco.
           </p>
         </div>
       </section>
@@ -73,27 +105,32 @@ const AboutUs = () => {
         <div className="container">
           <div className={styles.storyLayout}>
             <div className={styles.storyContent}>
-              <h2 className={styles.sectionHeading}>Our Story</h2>
+              <h2 className={styles.sectionHeading}>Who We Are</h2>
               <p className={styles.storyText}>
-                Founded in 2010, Premium Potato Imports began with a simple mission: to connect businesses 
-                with the world's finest potatoes. What started as a small operation has grown into one of 
-                the leading potato import agencies in North America.
+                Nashmi7 LLC is a Houston-based importer, distributor, and private label supplier specializing in premium
+                Belgian frozen French fries. We act as the U.S. commercial arm for a certified European producer,
+                providing Sysco and food-service buyers with a turnkey program of straight-cut, shoestring, and skin-on SKUs.
               </p>
               <p className={styles.storyText}>
-                Our founder, Robert Thompson, recognized a gap in the market for reliable, high-quality 
-                potato imports. With his background in agricultural trade and a passion for excellence, 
-                he built relationships with premium farms worldwide, ensuring consistent quality and supply.
+                Our focus is delivering consistent quality backed by meticulous documentation. Every shipment arrives with
+                FDA registration details, EU health certificates, certificates of origin, and insurance listing Sysco
+                Corporation. We combine this compliance rigor with agile logistics, ensuring cold-chain integrity from quay to warehouse.
               </p>
               <p className={styles.storyText}>
-                Today, we serve over 200 clients including restaurants, retailers, and food service companies. 
-                Our commitment to quality, reliability, and customer service has made us a trusted partner 
-                in the industry.
+                Led by owner Rashed Abu Awwad, the team coordinates procurement, quality, and customer service,
+                providing Sysco stakeholders with direct access to decision-makers. We strive for professional, responsive
+                support at every stage of the onboarding and replenishment process.
               </p>
             </div>
             <div className={styles.storyImage}>
               <div className={styles.imagePlaceholder}>
-                <span className={styles.imageIcon}>🌾</span>
-                <p>Premium Quality From Farm to Table</p>
+                <span className={styles.imageIcon}>📊</span>
+                <p>Sysco-Ready Snapshot</p>
+                <ul style={{ listStyle: 'none', padding: 0, marginTop: '25px', textAlign: 'left', fontSize: '1.05rem', lineHeight: 1.8 }}>
+                  {companySnapshot.map((item) => (
+                    <li key={item.label}><strong>{item.label}:</strong> {item.value}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -104,10 +141,9 @@ const AboutUs = () => {
       <section className={styles.visionSection}>
         <div className="container">
           <div className={styles.visionContent}>
-            <h2 className={styles.visionTitle}>Our Vision</h2>
+            <h2 className={styles.visionTitle}>Our Promise</h2>
             <p className={styles.visionText}>
-              To be the world's most trusted potato import agency, setting the standard for quality, 
-              sustainability, and customer service in the agricultural import industry.
+              To be Sysco’s most reliable source for Belgian frozen fries by pairing impeccable documentation with an unbroken cold chain and responsive vendor support.
             </p>
           </div>
         </div>
@@ -116,8 +152,8 @@ const AboutUs = () => {
       {/* Core Values Section */}
       <section className="section section-light">
         <div className="container">
-          <h2 className="section-title">Our Core Values</h2>
-          <p className="section-subtitle">The principles that guide everything we do</p>
+          <h2 className="section-title">Operational Pillars</h2>
+          <p className="section-subtitle">How Nashmi7 LLC delivers value to Sysco buyers</p>
           <div className="grid-4">
             {coreValues.map((value, index) => (
               <div key={index} className="card">
@@ -133,10 +169,10 @@ const AboutUs = () => {
       {/* Team Section */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Meet Our Team</h2>
-          <p className="section-subtitle">Dedicated professionals committed to your success</p>
+          <h2 className="section-title">Leadership & Operations</h2>
+          <p className="section-subtitle">Direct lines to the people who own each step of your supply chain</p>
           <div className="grid-4">
-            {team.map((member, index) => (
+            {leadership.map((member, index) => (
               <div key={index} className={styles.teamCard}>
                 <div className={styles.teamPhoto}>
                   <span className={styles.photoIcon}>👤</span>
@@ -153,25 +189,15 @@ const AboutUs = () => {
       {/* Certifications Section */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Certifications & Partnerships</h2>
-          <p className="section-subtitle">Certified quality you can trust</p>
+          <h2 className="section-title">Quality & Compliance Backbone</h2>
+          <p className="section-subtitle">Documentation package assembled for Sysco vendor onboarding</p>
           <div className={styles.certGrid}>
-            <div className={styles.certBadge}>
-              <div className={styles.badgeIcon}>✓</div>
-              <p>ISO 9001 Certified</p>
-            </div>
-            <div className={styles.certBadge}>
-              <div className={styles.badgeIcon}>🌱</div>
-              <p>Organic Certified</p>
-            </div>
-            <div className={styles.certBadge}>
-              <div className={styles.badgeIcon}>🌍</div>
-              <p>Global GAP</p>
-            </div>
-            <div className={styles.certBadge}>
-              <div className={styles.badgeIcon}>🏆</div>
-              <p>Quality Assurance Int.</p>
-            </div>
+            {complianceBadges.map((badge) => (
+              <div key={badge.label} className={styles.certBadge}>
+                <div className={styles.badgeIcon}>{badge.icon}</div>
+                <p>{badge.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -179,8 +205,8 @@ const AboutUs = () => {
       {/* Company Timeline */}
       <section className="section section-light">
         <div className="container">
-          <h2 className="section-title">Our Journey</h2>
-          <p className="section-subtitle">Key milestones in our growth</p>
+          <h2 className="section-title">Program Roadmap</h2>
+          <p className="section-subtitle">Steps that prepare Nashmi7 LLC to serve Sysco nationwide</p>
           <div className={styles.timeline}>
             {timeline.map((item, index) => (
               <div key={index} className={styles.timelineItem}>

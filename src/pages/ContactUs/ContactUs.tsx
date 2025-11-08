@@ -32,28 +32,28 @@ const ContactUs = () => {
 
   const faqs = [
     {
-      question: "What is the minimum order quantity?",
-      answer: "Our minimum order quantity is 5 tons per variety. However, we can discuss custom arrangements for mixed orders."
+      question: "What documentation do you provide with each shipment?",
+      answer: "Every load includes SQF/BRCGS certificate copies, EU Health Certificate, Certificate of Origin, FDA registration confirmation, and full traceability logs."
     },
     {
-      question: "What are your delivery times?",
-      answer: "Standard delivery times are 2-3 weeks from order confirmation, depending on origin and destination. Express shipping options are available."
+      question: "How fast can you deliver after a purchase order?",
+      answer: "Our standard lead time is 3–4 weeks door-to-door into Houston, including production slot, ocean freight, customs clearance, and cold storage intake."
     },
     {
-      question: "Do you provide quality certificates?",
-      answer: "Yes, all our shipments come with complete quality certificates, phytosanitary certificates, and origin certificates."
+      question: "Which SKUs are available for Sysco vendor onboarding?",
+      answer: "We currently offer Belgian straight cut (9×9 mm), shoestring (7×7 mm), and skin-on straight cut (9×9 mm) fries in 4 × 5 lb food-service cases."
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept bank transfers, letters of credit (L/C), and for established clients, we offer net payment terms."
+      question: "Do you support private label programs?",
+      answer: "Yes. Our Belgian partner can produce Sysco-exclusive or customer-branded bags and cartons with approved artwork and GS1 GTIN coding."
     },
     {
-      question: "Can you supply organic potatoes?",
-      answer: "Yes, we have partnerships with certified organic farms and can supply organic potatoes with full certification."
+      question: "How is cold chain monitored?",
+      answer: "Temperature is verified at loading, during ocean transit, at Port of Houston arrival, and at warehouse receiving with -18 °C data-logger reports."
     },
     {
-      question: "Do you offer storage solutions?",
-      answer: "We have temperature-controlled storage facilities and can arrange storage solutions as per your requirements."
+      question: "Who is my primary contact?",
+      answer: "Owner Rashed Abu Awwad personally manages vendor onboarding and can coordinate directly with Sysco procurement, QA, and logistics teams."
     },
   ]
 
@@ -62,9 +62,9 @@ const ContactUs = () => {
       {/* Page Header */}
       <section className={styles.pageHeader}>
         <div className="container">
-          <h1 className={styles.pageTitle}>Get In Touch With Us</h1>
+          <h1 className={styles.pageTitle}>Connect with Nashmi7 LLC</h1>
           <p className={styles.pageSubtitle}>
-            We're here to answer your questions and discuss your potato import needs
+            Reach out to align on Sysco vendor onboarding, documentation, and delivery schedules.
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ const ContactUs = () => {
           <div className={styles.contactLayout}>
             {/* Contact Form */}
             <div className={styles.formColumn}>
-              <h2 className={styles.formTitle}>Send Us a Message</h2>
+              <h2 className={styles.formTitle}>Request Documentation or Schedule a Call</h2>
               <form onSubmit={handleSubmit} className={styles.contactForm}>
                 <div className={styles.formGroup}>
                   <label htmlFor="fullName" className={styles.label}>Full Name *</label>
@@ -146,10 +146,10 @@ const ContactUs = () => {
                       className={styles.select}
                     >
                       <option value="">Select inquiry type</option>
-                      <option value="quote">Request Quote</option>
-                      <option value="product">Product Information</option>
-                      <option value="partnership">Partnership Opportunities</option>
-                      <option value="support">Customer Support</option>
+                      <option value="quote">Request Pricing Sheet</option>
+                      <option value="product">Product Specifications</option>
+                      <option value="partnership">Sysco Vendor Onboarding</option>
+                      <option value="support">Logistics & Delivery Coordination</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -181,16 +181,16 @@ const ContactUs = () => {
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>📍</div>
                   <div className={styles.infoContent}>
-                    <h4>Office Address</h4>
-                    <p>123 Import Boulevard<br />Trade City, TC 12345<br />United States</p>
+                    <h4>Headquarters</h4>
+                    <p>Houston, Texas<br />United States</p>
                   </div>
                 </div>
 
                 <div className={styles.infoItem}>
                   <div className={styles.infoIcon}>📞</div>
                   <div className={styles.infoContent}>
-                    <h4>Phone Numbers</h4>
-                    <p>Main: +1 (555) 123-4567<br />Support: +1 (555) 123-4568</p>
+                    <h4>Phone</h4>
+                    <p>Add business number</p>
                   </div>
                 </div>
 
@@ -198,7 +198,7 @@ const ContactUs = () => {
                   <div className={styles.infoIcon}>✉️</div>
                   <div className={styles.infoContent}>
                     <h4>Email</h4>
-                    <p>info@premiumpotato.com<br />sales@premiumpotato.com</p>
+                    <p>rashedalawwadu@gmail.com</p>
                   </div>
                 </div>
 
@@ -206,17 +206,16 @@ const ContactUs = () => {
                   <div className={styles.infoIcon}>🕒</div>
                   <div className={styles.infoContent}>
                     <h4>Business Hours</h4>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 2:00 PM<br />Sunday: Closed</p>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM CST<br />Saturday: 9:00 AM - 1:00 PM CST<br />Sunday: By appointment</p>
                   </div>
                 </div>
 
                 <div className={styles.socialLinks}>
                   <h4>Follow Us</h4>
                   <div className={styles.socialIcons}>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>📘</a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>📷</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>💼</a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>🐦</a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>💼</a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>📷</a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>📘</a>
                   </div>
                 </div>
               </div>
@@ -229,8 +228,8 @@ const ContactUs = () => {
       <section className={styles.mapSection}>
         <div className={styles.mapPlaceholder}>
           <div className={styles.mapOverlay}>
-            <p>📍 123 Import Boulevard, Trade City, TC 12345</p>
-            <p className={styles.mapNote}>Interactive map would be embedded here</p>
+            <p>📍 Houston, Texas — Nashmi7 LLC Cold-Chain Hub</p>
+            <p className={styles.mapNote}>Map placeholder – embed warehouse location once confirmed</p>
           </div>
         </div>
       </section>
