@@ -226,8 +226,6 @@ const ContactUs = () => {
                     <h4>Email</h4>
                     <p>
                       <a href="mailto:sales@nashmi7.com" className={styles.emailLink}>sales@nashmi7.com</a>
-                      <br />
-                      <a href="mailto:rashedalawwadu@gmail.com" className={styles.emailLink}>rashedalawwadu@gmail.com</a>
                     </p>
                   </div>
                 </div>

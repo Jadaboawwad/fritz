@@ -301,6 +301,19 @@ p {
   color: var(--earth-brown);
 }
 
+.paginationControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.paginationStatus {
+  font-size: 1rem;
+  color: var(--earth-brown);
+}
+
 .quotePage {
   width: 100%;
   background-color: transparent;

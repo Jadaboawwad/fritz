@@ -118,11 +118,25 @@ const PlaceholderPage: FC<{ title: string }> = ({ title }) => (
 )
 
 const ProductsPage: FC = () => {
+  const itemsPerPage = 12
+  const [currentPage, setCurrentPage] = useState(1)
+
   const products = productImageFiles.map((file, index) => ({
     id: `product-${index + 1}`,
     imageSrc: `/images/products/${file}`,
     title: `Nashmi7 Belgian Fries ${index + 1}`,
   }))
+
+  const totalPages = Math.ceil(products.length / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const paginatedProducts = products.slice(startIndex, startIndex + itemsPerPage)
+
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
 
   return (
     <div className="productsPage">
@@ -133,7 +147,7 @@ const ProductsPage: FC = () => {
             High-resolution visuals of Nashmi7 LLC’s Belgian frozen French fries portfolio prepared for Sysco vendor submission.
           </p>
           <div className="productsGrid">
-            {products.map((product) => (
+            {paginatedProducts.map((product) => (
               <div key={product.id} className="productCard">
                 <div className="productImageWrapper">
                   <img
@@ -149,6 +163,27 @@ const ProductsPage: FC = () => {
               </div>
             ))}
           </div>
+          {totalPages > 1 && (
+            <div className="paginationControls">
+              <button
+                className="btn btn-secondary"
+                disabled={currentPage === 1}
+                onClick={() => handlePageChange(currentPage - 1)}
+              >
+                Previous
+              </button>
+              <span className="paginationStatus">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                className="btn btn-secondary"
+                disabled={currentPage === totalPages}
+                onClick={() => handlePageChange(currentPage + 1)}
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </div>

@@ -29,7 +29,9 @@ const AboutUs = () => {
     {
       name: "Rashed Abu Awwad",
       title: "Owner & Vendor Lead",
-      bio: "Primary contact for Sysco vendor onboarding, overseeing commercial strategy, pricing, and partnerships."
+      bio: "Primary contact for Sysco vendor onboarding, overseeing commercial strategy, pricing, and partnerships.",
+      image: "/images/person/rashed.png",
+      imageAlt: "Rashed Abu Awwad standing in front of the Museum of the Future in Dubai"
     },
     {
       name: "Belgian Production Partner",
@@ -54,8 +56,8 @@ const AboutUs = () => {
     { label: "Headquarters", value: "Houston, Texas – USA" },
     { label: "Owner", value: "Rashed Abu Awwad" },
     { label: "Website", value: "www.nashmi7.com" },
-    { label: "Email", value: "rashedalawwadu@gmail.com" },
-    { label: "Phone", value: "Add business number" },
+    { label: "Email", value: "sales@nashmi7.com" },
+    { label: "Phone", value: "+1 (443) 397-4814" },
   ]
 
   const complianceBadges = [
@@ -175,7 +177,15 @@ const AboutUs = () => {
             {leadership.map((member, index) => (
               <div key={index} className={styles.teamCard}>
                 <div className={styles.teamPhoto}>
-                  <span className={styles.photoIcon}>👤</span>
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.imageAlt || member.name}
+                      className={styles.teamPhotoImage}
+                    />
+                  ) : (
+                    <span className={styles.photoIcon}>👤</span>
+                  )}
                 </div>
                 <h3 className={styles.teamName}>{member.name}</h3>
                 <p className={styles.teamTitle}>{member.title}</p>
