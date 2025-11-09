@@ -66,17 +66,8 @@ const Footer = () => (
                         <a href="https://wa.me/14433974814" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                             <span className={styles.socialIcon}>💬</span>
                         </a>
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            <span className={styles.socialIcon}>📘</span>
-                        </a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            <span className={styles.socialIcon}>📷</span>
-                        </a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                        <a href="https://www.linkedin.com/in/rashed-awwad-1999y/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                             <span className={styles.socialIcon}>💼</span>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            <span className={styles.socialIcon}>🐦</span>
                         </a>
                     </div>
                 </div>
