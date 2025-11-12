@@ -119,15 +119,6 @@ const Home = () => {
     "Completed W-9 or W-8BEN-E for vendor setup",
   ]
 
-  const deliverables = [
-    "Nashmi7 LLC Company Profile (PDF)",
-    "Product Catalogue & Specifications (PDF)",
-    "Certifications & Food-Safety Documentation Pack (PDF, zipped bundle)",
-    "Pricing Sheet (Excel or PDF format)",
-    "Curated photo assets (PNG / JPEG)",
-    "Personalized cover letter addressed to Sysco vendor onboarding",
-  ]
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -283,35 +274,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Deliverables */}
-      <section className="section section-gray">
-        <div className="container">
-          <h2 className="section-title">Submission Deliverables</h2>
-          <p className="section-subtitle">Package these files for Sysco's vendor onboarding portal</p>
-          <ul className={styles.deliverablesList}>
-            {deliverables.map((item) => (
-              <li key={item}>
-                <span className={styles.assetIcon}>📄</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className={styles.ctaSection}>
-        <div className="container">
-          <h2 className={styles.ctaTitle}>Ready to Finalize Your Sysco Vendor Folio?</h2>
-          <p className={styles.ctaText}>
-            Connect with Nashmi7 LLC to confirm documentation, pricing, and delivery schedules tailored for Sysco distribution.
-          </p>
-          <div className={styles.ctaButtons}>
-            <Link to="/about" className="btn btn-primary">Company Profile</Link>
-            <Link to="/contact" className="btn btn-secondary">Contact Rashed Abu Awwad</Link>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
